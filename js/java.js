@@ -21,11 +21,15 @@ const prevButton = document.getElementById("prev-button");
 const nextButton = document.getElementById("next-button");
 
 prevButton.addEventListener("click", () => {
-    updateImage(prev)
+   if(currentImageIndex > 1){ 
+    updateImage("prev");
+   }
 })
 nextButton.addEventListener("click", () => {
-    updateImage(next)
-})
+    if(currentImageIndex < 3){ 
+        updateImage("next");
+       }
+    })
 
 let imageUrls = [
     "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/A-Cat.jpg/2560px-A-Cat.jpg",
