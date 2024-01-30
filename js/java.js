@@ -63,4 +63,4 @@ function updateImage(direction){
 
 }
 
-setInterval(updateImage);
+setInterval(updateImage, 3000);
